@@ -13,6 +13,9 @@
 .main{
     position: absolute;
 }
+body{
+    overflow-x: hidden;
+}
 nav {
     width: 100%;
     height: 100px;
@@ -85,20 +88,21 @@ font-size: 15px;
     height: 100%;
     object-fit: cover;
     position: absolute;
+    filter: brightness(0.35);
 }
 
 .bg-video-overlay{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(#00000081,#00000081);
-    position: fixed;
+    position: absolute;
     z-index: 9;
 }
 .cursor{
     width: 25px;
     height: 25px;
     position: absolute;
-    background-color: #000000;
+    background-color: #ace01e;
     z-index: 9999;
     border-radius: 50%;
 }
@@ -106,17 +110,21 @@ font-size: 15px;
     width: 450px;
     height: 450px;
     position: absolute;
-    background-color: #95c11d7c;
-    filter: blur(100px);
+    background-color: #667e257c;
+    filter: blur(60px);
     z-index: 99;
     border-radius: 50%;
 }
 .section-1{
     font-size: 18px;
     font-family: "monti";
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
+}
+.section-1-text{
     position: relative;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     z-index: 100;
     display: flex;
@@ -124,7 +132,6 @@ font-size: 15px;
     justify-content: center;
     align-items: center;
     color: white;
-    padding-bottom: 50px;
 }
 .section-1 h1{
     padding-top: 5px;
@@ -152,4 +159,41 @@ font-size: 15px;
     -webkit-text-stroke-color: #95c11d;
     -webkit-text-stroke-width: 1px;
     color: black;
+}
+
+.section-2{
+    /* font-family: "monti"; */
+    min-height: 100vh;
+    color: rgb(0, 0, 0);
+}
+.scrolling-text{
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.scrolling-text-1{
+    display: inline-block;
+    word-spacing: 43px;
+    white-space: nowrap;
+    line-height: 1.6;
+    animation: scrolling-text 12s linear infinite;
+}
+.scrolling-text-1 h4{
+    display: inline-block;
+    font-weight: bold;
+    white-space: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 1px;
+    font-size: 80px;
+    -webkit-text-stroke-color: #95c11d;
+    -webkit-text-stroke-width: 1px ;
+}
+
+@keyframes scrolling-text {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
