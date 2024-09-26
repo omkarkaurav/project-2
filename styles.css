@@ -108,6 +108,7 @@ nav {
     background-color: #95c11e;
     z-index: 9999;
     border-radius: 50%;
+    pointer-events: none;
 }
 
 .cursor-b {
@@ -119,6 +120,7 @@ nav {
     filter: blur(120px);
     z-index: 99;
     border-radius: 50%;
+    pointer-events: none;
 }
 
 .section-1 {
@@ -311,6 +313,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    transition: all 0.5s ease-in-out;
 }
 
 .front-card-text{
@@ -329,8 +332,8 @@ nav {
     font-size: 29px;
     font-weight: 900;
     padding-bottom: 5px;
-    /* line-height: 1.6; */
 }
+
 .card-2 .front-card-text h1:first-child{
     font-size: 18px;
 }
@@ -372,10 +375,11 @@ nav {
 }
 
 .card:hover .card-front{
-    z-index: -1;
-    transition: all 8s ease-in-out;
+    transform: scaleX(0);
+    opacity: 0;
+    transform-origin:0%;
+    transition: all 0.5s ease-in-out;
 }
-
 
 .gradient{
     width: 100vw;
