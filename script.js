@@ -1,11 +1,11 @@
-var crsr = document.querySelector(".cursor")
-var crsrbg = document.querySelector(".cursor-b")
-document.addEventListener("mousemove",function(dets){
-    crsr.style.left = dets.x-12.5+"px"
-    crsr.style.top = dets.y-12.5+"px"
-    crsrbg.style.left = dets.x-225+"px"
-    crsrbg.style.top = dets.y-225+"px"
-})
+// var crsr = document.querySelector(".cursor")
+// var crsrbg = document.querySelector(".cursor-b")
+// document.addEventListener("mousemove",function(dets){
+//     crsr.style.left = dets.x-12.5+"px"
+//     crsr.style.top = dets.y-12.5+"px"
+//     crsrbg.style.left = dets.x-225+"px"
+//     crsrbg.style.top = dets.y-225+"px"
+// })
 
 
 
@@ -30,7 +30,7 @@ gsap.to(".main",{
         trigger:".main",
         scroller:"body",
         start:"top -40%",
-        end:"top -60%",
+        end:"top -70%",
         scrub:2,
     }
 
